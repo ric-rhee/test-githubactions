@@ -1,10 +1,16 @@
 name: ssh-test
 on: [push]
-uses: fifsky/ssh-action@master
-with:
-  command: |
-    cd
-    ls -a
-  host: rheer@ecegrid.ecn.purdue.edu
-  user: root
-  key: 8rnyPU16ce
+jobs:
+  build:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        #host: ${{ secrets.HOST }}
+        host: rheer@ecegrid.ecn.purdue.edu
+        username: rheer
+        password: 8rnyPU16ce
+        #port: ${{ secrets.PORT }}
+        script: cd && ls -a
