@@ -1,0 +1,9 @@
+name: ssh-test
+uses: fifsky/ssh-action@master
+with:
+  command: |
+    cd
+    ls -a
+  host: rheer@ecegrid.ecn.purdue.edu
+  user: root
+  key: 8rnyPU16ce
