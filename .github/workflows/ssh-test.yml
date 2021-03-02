@@ -9,7 +9,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         #host: ${{ secrets.HOST }}
-        host: rheer@ecegrid.ecn.purdue.edu
+        host: ecegrid.ecn.purdue.edu
         username: rheer
         password: 8rnyPU16ce
         #port: ${{ secrets.PORT }}
