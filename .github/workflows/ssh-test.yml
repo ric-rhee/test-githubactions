@@ -1,4 +1,5 @@
 name: ssh-test
+on: [push]
 uses: fifsky/ssh-action@master
 with:
   command: |
