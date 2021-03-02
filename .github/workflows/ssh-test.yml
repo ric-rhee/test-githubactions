@@ -13,4 +13,6 @@ jobs:
         username: rheer
         password: 8rnyPU16ce
         #port: ${{ secrets.PORT }}
-        script: cd && ls -a
+        script: |
+          cd
+          ls -a
