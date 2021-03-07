@@ -1,5 +1,5 @@
 name: ssh-test
-on: [push]
+on: [pull-request]
 jobs:
   build:
     name: test
@@ -8,11 +8,9 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        #host: ${{ secrets.HOST }}
         host: ecegrid.ecn.purdue.edu
         username: rheer
         password: 8rnyPU16ce
-        #port: ${{ secrets.PORT }}
         script: |
           cd
           ls -a
