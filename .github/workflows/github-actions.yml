@@ -9,6 +9,3 @@ jobs:
         with:
           python-version: '3.8'
       - run: pip install -r yolo/requirements.txt
-  branches:
-    - test2
-      run: test2.py
