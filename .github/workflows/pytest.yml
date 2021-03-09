@@ -1,0 +1,11 @@
+name: pytest
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        pip install pytest
+        pip install pytest-cov
+        pytest failedtest.py
+      if: ${{ always() }}
