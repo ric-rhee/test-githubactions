@@ -4,7 +4,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      run: |
+    - run: |
         pip install pytest
         pip install pytest-cov
         pytest failedtest.py
