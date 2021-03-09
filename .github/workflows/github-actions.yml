@@ -1,5 +1,5 @@
 name: github-actions
-on: [push, pull_request]
+on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
