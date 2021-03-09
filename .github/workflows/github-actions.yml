@@ -9,5 +9,5 @@ jobs:
       with:
         python-version: '3.8'
     - run: pip install -r yolo/requirements.txt
-    - run: failedtest.py
+    - run: pytest failedtest.py
     if: ${{ always() }}
