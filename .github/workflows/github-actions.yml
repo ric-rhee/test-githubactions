@@ -4,8 +4,10 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-      - run: pip install -r yolo/requirements.txt
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - run: pip install -r yolo/requirements.txt
+    - run: failedtest.py
+    if: ${{ always() }}
